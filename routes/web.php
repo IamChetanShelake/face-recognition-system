@@ -8,7 +8,7 @@ Route::get('/', [FaceController::class, 'index'])->name('face.index');
 
 // Face recognition routes
 Route::prefix('face')->name('face.')->group(function () {
-    Route::get('/dashboard', [FaceController::class, 'index'])->name('index');
+    Route::get('/dashboard', [FaceController::class, 'index'])->name('dashboard');
     
     // Registration routes
     Route::get('/register', [FaceController::class, 'showRegisterForm'])->name('register.form');

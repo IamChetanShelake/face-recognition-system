@@ -12,14 +12,12 @@ class FaceMatch extends Model
         'uploaded_photo_s3_key',
         'matched_person_id',
         'similarity_score',
-        'is_match',
-        'rekognition_response'
+        'is_match'
     ];
 
     protected $casts = [
         'is_match' => 'boolean',
-        'similarity_score' => 'decimal:2',
-        'rekognition_response' => 'array',
+        'similarity_score' => 'decimal:2'
     ];
 
     /**

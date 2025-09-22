@@ -35,10 +35,17 @@
                                     </h6>
                                 </div>
                                 <div class="card-body text-center">
-                                    <img src="{{ $selectedPerson->photo_s3_url }}" 
-                                         alt="{{ $selectedPerson->name }}" 
-                                         class="img-fluid rounded mb-3" 
-                                         style="max-height: 200px; object-fit: cover;">
+                                    @if(isset($selectedPerson->photo_url) && $selectedPerson->photo_url)
+                                        <img src="{{ $selectedPerson->photo_url }}" 
+                                             alt="{{ $selectedPerson->name }}" 
+                                             class="img-fluid rounded mb-3" 
+                                             style="max-height: 200px; object-fit: cover;">
+                                    @else
+                                        <div class="bg-light rounded mb-3 d-flex align-items-center justify-content-center" 
+                                             style="height: 200px;">
+                                            <i class="fas fa-user fa-3x text-muted"></i>
+                                        </div>
+                                    @endif
                                     <h5 class="card-title">{{ $selectedPerson->name }}</h5>
                                     <p class="text-muted">Registered: {{ $selectedPerson->created_at->format('M d, Y') }}</p>
                                 </div>

@@ -11,9 +11,7 @@ class Person extends Model
 
     protected $fillable = [
         'name',
-        'photo_s3_url',
         'photo_s3_key',
-        'rekognition_face_id',
         'is_active'
     ];
 
