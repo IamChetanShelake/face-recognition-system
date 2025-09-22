@@ -589,10 +589,10 @@ DB_USERNAME=root
 DB_PASSWORD=
 
 # AWS Configuration
-AWS_ACCESS_KEY_ID=AKIAQTXFPFMNBGZN7NVV
-AWS_SECRET_ACCESS_KEY=lay+TFsjjZmcG8wOquekqM9u2WcmVICVwmODket7
+AWS_ACCESS_KEY_ID=your_aws_access_key_here
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key_here
 AWS_DEFAULT_REGION=ap-south-1
-AWS_BUCKET=attendance-photos-raja
+AWS_BUCKET=your-s3-bucket-name
 
 # Rekognition Settings
 AWS_REKOGNITION_COLLECTION_ID=face-recognition-collection
@@ -601,7 +601,18 @@ AWS_REKOGNITION_FACE_MATCH_THRESHOLD=50
                 
                 <div class="info-box">
                     <strong><i class="fas fa-exclamation-triangle"></i> Security Note:</strong> 
-                    In production, use IAM roles instead of hardcoded credentials. Store sensitive data in AWS Secrets Manager.
+                    Replace placeholder values with your actual AWS credentials. In production, use IAM roles instead of hardcoded credentials. Store sensitive data in AWS Secrets Manager or environment variables.
+                </div>
+                
+                <div class="info-box">
+                    <strong><i class="fas fa-key"></i> AWS Credentials Setup:</strong>
+                    <ul>
+                        <li>Get your AWS Access Key ID from IAM Console</li>
+                        <li>Get your AWS Secret Access Key from IAM Console</li>
+                        <li>Replace <span class="highlight">your_aws_access_key_here</span> with actual key</li>
+                        <li>Replace <span class="highlight">your_aws_secret_key_here</span> with actual secret</li>
+                        <li>Replace <span class="highlight">your-s3-bucket-name</span> with your bucket name</li>
+                    </ul>
                 </div>
             </div>
 
